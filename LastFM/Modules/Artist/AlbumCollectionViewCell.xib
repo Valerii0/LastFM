@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCollectionViewCell" id="gTV-IL-0wX" customClass="AlbumCollectionViewCell" customModule="LastFM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="409"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="409"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXx-tx-LOv">
+                        <rect key="frame" x="0.0" y="44" width="225" height="365"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f4c-4f-8ic">
+                                <rect key="frame" x="0.0" y="0.0" width="225" height="286"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="75d-dw-PbE">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="225"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="75d-dw-PbE" secondAttribute="height" multiplier="1:1" id="lwq-3j-0vf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-MD-6km">
+                                        <rect key="frame" x="0.0" y="235" width="225" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHe-aK-8Fr">
+                                        <rect key="frame" x="0.0" y="265.5" width="225" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f4c-4f-8ic" secondAttribute="trailing" id="9nk-KX-fzc"/>
+                            <constraint firstItem="f4c-4f-8ic" firstAttribute="top" secondItem="pXx-tx-LOv" secondAttribute="top" id="ahE-u9-zRR"/>
+                            <constraint firstItem="f4c-4f-8ic" firstAttribute="leading" secondItem="pXx-tx-LOv" secondAttribute="leading" id="hmX-Zr-C5g"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="pXx-tx-LOv" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="A8U-1F-HKi"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="pXx-tx-LOv" secondAttribute="bottom" id="EmC-He-9yH"/>
+                <constraint firstItem="pXx-tx-LOv" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="NmL-74-ask"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="pXx-tx-LOv" secondAttribute="leading" id="f7d-Qd-jYN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="225" height="409"/>
+            <connections>
+                <outlet property="albumImage" destination="75d-dw-PbE" id="QEU-Af-6zp"/>
+                <outlet property="albumPlayedCountLabel" destination="DHe-aK-8Fr" id="77A-Dz-Rpy"/>
+                <outlet property="albumTitleLabel" destination="Vi2-MD-6km" id="VND-TQ-mpN"/>
+            </connections>
+            <point key="canvasLocation" x="-240" y="348"/>
+        </collectionViewCell>
+    </objects>
+</document>
